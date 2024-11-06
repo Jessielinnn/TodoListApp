@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app-container {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tool-bar {
+  background-color: #196bb3; /* Match the Bootstrap btn-primary color */
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.tool-bar h4 {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+span {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.add-btn {
+  background: #2e7ec0;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-btn:hover {
+  background-color: #1e88e5;
+}
+
+/* Table Styles */
+.table-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  table-layout: fixed; /* Ensures equal column widths */
+}
+
+thead th {
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(116, 114, 114);
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Dialog Overlay */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Dialog Box */
+.dialog {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.dialog h3 {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-color: #1976d2;
+  font-size: 18px;
+  padding: 10px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input[type='text'],
+.form-group input[type='date'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group input[type='text']::placeholder,
+.form-group input[type='date']::placeholder {
+  color: red;
+}
+
+.form-group input[type='text'].error,
+.form-group input[type='date'].error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Radio Buttons */
+.priority-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Dialog Buttons */
+.dialog-buttons {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dialog-btn {
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.blue-btn {
+  background-color: #1976d2;
+}
+
+
+.cancel-btn {
+  background-color: #dc3545;
+}
+
+.dialog-btn font-awesome-icon {
+  margin-right: 6px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 8px; /* Add some spacing between buttons */
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Blue Update button */
+.update-btn {
+  background-color: #1976d2; /* Blue color */
+}
+
+.update-btn:hover {
+  background-color: #1565c0; /* Darker blue on hover */
+}
+
+/* Red Delete button */
+.delete-btn {
+  background-color: #d32f2f; /* Red color */
+}
+
+.delete-btn:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
+
+
+label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+/* Floating label styles for text and date inputs */
+.floating-label {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 12px 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="text"]:not(:placeholder-shown),
+input[type="date"]:not(:placeholder-shown) {
+  border-color: #b7bbbe; /* Border color when focused or has content */
+}
+
+input[type="text"]:not(:placeholder-shown) + label,
+input[type="t$ext"]:focus + label,
+input[type="date"]:not(:placeholder-shown) + label,
+input[type="date"]:focus + label {
+  top: -8px;
+  left: 8px;
+  font-size: 12px;
+  color: #8a8b8d; /* Label color matching the border */
+  background: white;
+  padding: 0 4px;
+}
+
+input[type="date"] {
+  padding: 12px 4px 4px; /* Adjust padding for date input */
+}
